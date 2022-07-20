@@ -26,7 +26,7 @@ function Home2() {
               UMA BREVE <span className="purple"> INTRODUÇÃO </span>
             </h1>
             <p className="home-about-body">
-              Gosto muito de programação e já aprendi muita coisa mesmo sendo junior na área <FaBook />
+              Gosto muito de Web desenvolvimento e programação, já aprendi muita coisa e sempre quero aprender mais! <FaBook />
               <br />
               <br />Sou bom com
               <i>
