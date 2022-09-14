@@ -1,4 +1,4 @@
-import React, { ReactComponentElement } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 const MotionWrap = (Component:any, classNames:any) =>
