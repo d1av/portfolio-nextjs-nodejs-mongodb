@@ -9,7 +9,7 @@ const NavigationDots = ({ active }:any) => (
           key={item + index}
           className="app__navigation-dot"
           style={active === item ? { backgroundColor: "#313BAC" } : {}}
-        />
+        >&npsb;</a>
       )
     )}
   </div>
