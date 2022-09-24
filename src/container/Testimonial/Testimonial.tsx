@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { motion } from "framer-motion";
 
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { images } from "../../constants";
 import "./Testimonial.scss";
 
@@ -10,15 +11,15 @@ import "./Testimonial.scss";
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [testimonials, setTestimonials] = useState([
+  const testimonials = [
     {
       imgUrl: images.flutter,
       name: "Testimonial",
       company: "Company",
       feedback: images.about01,
     },
-  ]);
-  const [brands, setBrands] = useState([
+  ];
+  const brands = [
     {
       _id: "01",
       imgUrl: images.react,
@@ -27,23 +28,6 @@ const Testimonial = () => {
     {
       _id: "01",
       imgUrl: images.javascript,
-      name: "Nike",
-    },
-  ]);
-
-
-  const testimonialsData = [
-    {
-      imgUrl: images.flutter,
-      name: "Testimonial",
-      company: "Company",
-      feedback: images.about01,
-    },
-  ];
-  const brandsData = [
-    {
-      _id: "01",
-      imgUrl: images.flutter,
       name: "Nike",
     },
   ];
@@ -121,4 +105,8 @@ setTestimonials(testimonialsData);
   );
 };
 
-export default Testimonial;
+export default AppWrap(
+  MotionWrap(Testimonial, "app__testimonial"),
+  "testimonial",
+  "app__primarybg"
+);

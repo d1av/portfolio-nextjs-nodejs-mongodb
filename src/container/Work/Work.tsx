@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { images } from "../../constants";
 
-import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Work.scss";
 
 
