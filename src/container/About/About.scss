@@ -15,7 +15,7 @@
 .app__profile-item {
   width: 190px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   margin: 2rem;
@@ -32,7 +32,7 @@
     margin: 2rem 4rem;
 
     img {
-      height: 170px;
+      height: 320px;
     }
   }
 }
