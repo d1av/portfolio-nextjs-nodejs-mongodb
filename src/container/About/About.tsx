@@ -5,38 +5,23 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { images } from "../../constants";
 import "./About.scss";
 
+
 const aboutFallback = [
   {
-    title: "Web Development",
-    description: "I an a good web developer",
+    title: "Loading",
+    description: "Loading",
     imgUrl: images.about01,
-  },
-  {
-    title: "Web Design",
-    description: "I an a good web developer",
-    imgUrl: images.about02,
-  },
-  { title: "UX-UI", description: "I an a good UX/UI", imgUrl: images.about03 },
-  {
-    title: "Backend",
-    description: "I an a good backend Developer",
-    imgUrl: images.about04,
-  },
+  }
 ];
 
 const About = () => {
-  const [aboutData, setAboutData] = useState<any>([]);
+  const [aboutData, setAboutData] = useState<any>(aboutFallback);
   useEffect(() => {
     fetch("https://portfolio-en-server.vercel.app/portfolio/en/about")
       .then((res) => res.json())
       .then((data) => {
         if (!data) {
-          const fallback = {
-            title: "Web Design",
-            description: "I an a good web developer",
-            imgUrl: images.about02,
-          };
-          return setAboutData(fallback);
+          return console.log('Failed to fetch');
         }
         return setAboutData(data.about);
       });
@@ -50,13 +35,13 @@ const About = () => {
       </h2>
       {console.log(aboutData)}
       <div className="app__profiles">
-        {aboutData.map((about:any, index:any) => (
+        {aboutData.map((about: any, index: any) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: "tween" }}
             className="app__profile-item"
-            key={about.title + index}
+            key={about._id}
           >
             <img src={about.imgUrl} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
