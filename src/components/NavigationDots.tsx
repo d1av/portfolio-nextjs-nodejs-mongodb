@@ -4,6 +4,7 @@ const NavigationDots = ({ active }:any) => (
   <div className="app__navigation">
     {["home", "about", "work", "skills", "testimonial", "contact"].map(
       (item, index) => (
+        //@ts-ignore
         <a
           href={`#${item}`}
           key={item + index}
