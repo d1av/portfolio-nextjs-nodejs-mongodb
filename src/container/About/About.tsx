@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { images } from "../../constants";
 import "./About.scss";
 
-const abouts = [
+const aboutFallback = [
   {
     title: "Web Development",
     description: "I an a good web developer",
@@ -25,15 +25,32 @@ const abouts = [
 ];
 
 const About = () => {
+  const [aboutData, setAboutData] = useState<any>([]);
+  useEffect(() => {
+    fetch("https://portfolio-en-server.vercel.app/portfolio/en/about")
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data) {
+          const fallback = {
+            title: "Web Design",
+            description: "I an a good web developer",
+            imgUrl: images.about02,
+          };
+          return setAboutData(fallback);
+        }
+        return setAboutData(data.about);
+      });
+  }, []);
+
   return (
     <>
       <h2 className="head-text">
         I Know that <span>Good Design</span> <br />
         means <span>Good Business</span>
       </h2>
-
+      {console.log(aboutData)}
       <div className="app__profiles">
-        {abouts.map((about, index) => (
+        {aboutData.map((about:any, index:any) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
