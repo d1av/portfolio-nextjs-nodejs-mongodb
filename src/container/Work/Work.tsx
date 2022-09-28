@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
@@ -7,114 +7,94 @@ import { images } from "../../constants";
 
 import "./Work.scss";
 
-
-const work = [
+const workFallback = [
   {
+    _id: 11,
     title: "Web Development",
     projectLink: "#",
     codeLink: "#",
     imgUrl: images.about01,
     description: "Worked Here long time ago.",
     name: "Davi",
-    tags: ["Software Industrie 2","3","4"],
+    tags: ["Software Industrie 2", "3", "4"],
   },
   {
+    _id: 21,
     title: "Fullstack",
     projectLink: "#",
     codeLink: "#",
     imgUrl: images.about02,
     description: "Worked Here long time ago.",
     name: "Davi",
-    tags: ["Software Industrie 2","3","4"],
+    tags: ["Software Industrie 2", "3", "4"],
   },
   {
+    _id: 31,
     title: "Frontend",
     projectLink: "#",
     codeLink: "#",
     imgUrl: images.about03,
     description: "Worked Here long time ago.",
     name: "Davi",
-    tags: ["Software Industrie 2","3","4"],
+    tags: ["Software Industrie 2", "3", "4"],
   },
   {
+    _id: 44,
     title: "Backend",
     projectLink: "#",
     codeLink: "#",
     imgUrl: images.about04,
     description: "Worked Here long time ago.",
     name: "Davi",
-    tags: ["Software Industrie 2","3","4"],
+    tags: ["Software Industrie 2", "3", "4"],
   },
   {
+    _id: 25,
     title: "UX/UI",
     projectLink: "#",
     codeLink: "#",
     imgUrl: images.redux,
     description: "Worked Here long time ago.",
     name: "Davi",
-    tags: ["Software Industrie 2","3","4"],
+    tags: ["Software Industrie 2", "3", "4"],
   },
   {
+    _id: 16,
     title: "Web Development",
     projectLink: "#",
     codeLink: "#",
     imgUrl: images.figma,
     description: "Worked Here long time ago.",
     name: "Davi",
-    tags: ["Software Industrie 2","3","4"],
+    tags: ["Software Industrie 2", "3", "4"],
   },
 ];
 
-
 const Work = () => {
-  const activeFilter = "All";
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+  const [workData, setWorkData] = useState(workFallback);
 
-
-  const handleWorkFilter = (item:any) => {
-    console.log(item);
-    setAnimateCard({ y: 100, opacity: 0 });
-
-    setTimeout(() => {
-      setAnimateCard({ y: 0, opacity: 1 });
-
-      /* if (item === "All") {
-        setFilterWork(works);
-      } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
-      } */
-    }, 500);
-  };
+  useEffect(() => {
+    fetch("https://portfolio-en-server.vercel.app/portfolio/en/work")
+      .then((res) => res.json())
+      .then((data) => {
+        setWorkData(data)
+      });
+  }, []);
 
   return (
     <>
+      {console.log(workData)}
       <h2 className="head-text">
         My Creative <span>Portfolio</span> Section
       </h2>
-
-      <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
-      </div>
-
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {work.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
+        {workData.map((work) => (
+          <div className="app__work-item app__flex" key={work._id}>
             <div className="app__work-img app__flex">
               <img src={work.imgUrl} alt={work.name} />
 

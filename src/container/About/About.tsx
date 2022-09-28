@@ -16,15 +16,11 @@ const aboutFallback = [
 
 const About = () => {
   const [aboutData, setAboutData] = useState<any>(aboutFallback);
+
   useEffect(() => {
     fetch("https://portfolio-en-server.vercel.app/portfolio/en/about")
       .then((res) => res.json())
-      .then((data) => {
-        if (!data) {
-          return console.log('Failed to fetch');
-        }
-        return setAboutData(data.about);
-      });
+      .then((data) => setAboutData(data));
   }, []);
 
   return (
@@ -33,9 +29,8 @@ const About = () => {
         I Know that <span>Good Design</span> <br />
         means <span>Good Business</span>
       </h2>
-      {console.log(aboutData)}
       <div className="app__profiles">
-        {aboutData.map((about: any, index: any) => (
+        {aboutData.map((about: any) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
