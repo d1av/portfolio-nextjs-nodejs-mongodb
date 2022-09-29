@@ -13,10 +13,6 @@ const AppWrap = (
         <div className="app__wrapper app__flex">
           <Component />
         </div>
-        {/* <div className="copyright">
-            <p className="p-text">@2022 Davi</p>
-            <p className="p-text">All rights reserved</p>
-          </div> */}
         <NavigationDots active={idName} />
       </div>
     );

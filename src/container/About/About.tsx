@@ -8,6 +8,7 @@ import "./About.scss";
 
 const aboutFallback = [
   {
+    _id: 123124213,
     title: "Loading",
     description: "Loading",
     imgUrl: images.about01,
