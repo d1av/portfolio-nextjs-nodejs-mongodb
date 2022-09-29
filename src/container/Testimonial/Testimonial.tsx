@@ -9,10 +9,10 @@ import "./Testimonial.scss";
 const testimonialsFallback = [
   {
     _id: 12345,
-    imgUrl: images.flutter,
-    name: "Testimonial",
-    company: "Company",
-    feedback: images.about01,
+    imgUrl: images.react,
+    name: "Loading",
+    company: "Retrieving Data",
+    feedback: images.react,
   },
 ];
 
@@ -30,7 +30,7 @@ const Testimonial = () => {
     setCurrentIndex(index);
   };
 
-  
+
   return (
     <>
       {testimonialsData.length && (
