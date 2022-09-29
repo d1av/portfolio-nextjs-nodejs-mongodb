@@ -16,19 +16,6 @@ const testimonialsFallback = [
   },
 ];
 
-const brands = [
-  {
-    _id: "01",
-    imgUrl: images.asus,
-    name: "Nike",
-  },
-  {
-    _id: "01",
-    imgUrl: images.amazon,
-    name: "Nike",
-  },
-];
-
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [testimonialsData, setTestimonialsData] = useState(testimonialsFallback);
@@ -43,12 +30,7 @@ const Testimonial = () => {
     setCurrentIndex(index);
   };
 
-  /* useEffect(() => {
-setTestimonials(testimonialsData);
-        setBrands(brandsData);
-
-  }, []); */
-
+  
   return (
     <>
       {testimonialsData.length && (
