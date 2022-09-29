@@ -33,8 +33,9 @@ import "./Skills.scss";
    },
  ];
 
-  const experiences = [
+  const experiencesFallback = [
     {
+      _id: 1234,
       year: "2022",
       works: [
         {
@@ -47,6 +48,7 @@ import "./Skills.scss";
       ],
     },
     {
+      _id: 1234,
       year: "2022",
       works: [
         {
@@ -59,6 +61,7 @@ import "./Skills.scss";
       ],
     },
     {
+      _id: 1234,
       year: "2022",
       works: [
         {
@@ -74,6 +77,7 @@ import "./Skills.scss";
 
 const Skills = () => {
   const [skillsData, setSkillsData] = useState(skillsFallback);
+  const [experiencesData, setExperiencesData] = useState(experiencesFallback);
 
 useEffect(() => {
   fetch("https://portfolio-en-server.vercel.app/portfolio/en/skills")
@@ -106,7 +110,7 @@ useEffect(() => {
           ))}
         </motion.div>
         <div className="app__skills-exp">
-          {experiences.map((experience) => (
+          {experiencesData.map((experience) => (
             <motion.div className="app__skills-exp-item" key={experience.year}>
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
