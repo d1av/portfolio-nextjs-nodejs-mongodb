@@ -41,9 +41,7 @@ const Footer = () => {
     setLoading(true);
 
 
-       fetch(
-         /* "https://portfolio-en-server.vercel.app/portfolio/en/contact", */
-         "https://6c0966e2-0750-41f8-98ce-9bb92cf6e7a4.mock.pstmn.io/contact",
+       fetch("https://portfolio-en-server.vercel.app/portfolio/contact",
          {
            method: "POST",
            mode: "cors",
