@@ -18,6 +18,8 @@ import sass from "../assets/sass.png";
 import typescript from "../assets/typescript.png";
 import vue from "../assets/vue.png";
 
+import Davi_Logo from "../assets/Davi_Logo.png";
+
 import about01 from "../assets/about01.png";
 import about02 from "../assets/about02.png";
 import about03 from "../assets/about03.png";
@@ -36,6 +38,7 @@ import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 
 export default {
+  Davi_Logo,
   email,
   mobile,
   api,

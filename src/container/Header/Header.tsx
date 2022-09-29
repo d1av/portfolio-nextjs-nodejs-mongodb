@@ -44,6 +44,7 @@ const Header = () => (
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
     >
+      <img className="header_img" src={images.Davi_Logo} alt="profile_bg" />
       {/* <img src={images.profile} alt="profile_bg" /> */}
       <motion.img
         whileInView={{ scale: [0, 1] }}
