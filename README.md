@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+## Portfolio in English
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![portfolio-en - Copia](https://user-images.githubusercontent.com/107776531/193162591-da3ad0da-f8a7-4d69-a430-add61df868b7.png)
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+This is the code for my portfolio in english using an Express API located at https://portfolio-en-server.vercel.app/
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Live Version
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This site is currently live. [View the Live Website]
 
-### `npm test`
+## Resources Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Typescript
 
-### `npm run build`
+React
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Node
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Bootstrap
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Motion
 
-### `npm run eject`
+TailwindCSS
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Quality Checks
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Jest Tests
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Page exhibition speed measured with Google PageSpeed (https://developers.google.com/speed/pagespeed/insights/). 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Feedback and Bugs
 
-## Learn More
+If you have feedback or a bug report, please feel free to open a GitHub issue!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you would like to contribute to the project, you may create a Pull Request containing your proposed changes!.
+
+## Licensing
+
+Copyright (C) 2022 Davi
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+
+## Contact
+
+davi4alves@gmail.com
+
+
+
+[View the Live Website]:https://portfolio-en-client.vercel.app/
