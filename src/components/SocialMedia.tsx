@@ -14,7 +14,7 @@ const SocialMedia = () => (
     </div>
     <div>
       <a
-        href="https://www.linkedin.com/in/davialvesoliveira/?locale=en_US"
+        href="https://www.linkedin.com/in/d1av/?locale=en_US"
         target="_blank"
         rel="noreferrer"
       >
@@ -22,7 +22,7 @@ const SocialMedia = () => (
       </a>
     </div>
     <div>
-      <a href="https://github.com/davi38" target="_blank" rel="noreferrer">
+      <a href="https://github.com/d1av" target="_blank" rel="noreferrer">
         <BsGithub />
       </a>
     </div>
