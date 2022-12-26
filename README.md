@@ -11,6 +11,12 @@ This is the code for my portfolio in english using an Express API located at htt
 
 This site is currently live. [View the Live Website]
 
+Site: https://portfolio-davi.vercel.app/
+
+Dashboard: https://dashboard-portfolio.netlify.app/
+
+API server: https://portfolio-en-server.vercel.app/
+
 ## Resources Used
 
 Typescript
