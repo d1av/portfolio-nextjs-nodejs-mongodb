@@ -66,7 +66,7 @@ const Header = () => (
         images.spring,
         images.nodejs,
         images.typescript,
-      ].map((circle, index) => (
+      ].map((circle:any, index:number) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>
