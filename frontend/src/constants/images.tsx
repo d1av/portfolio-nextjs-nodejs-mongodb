@@ -36,8 +36,10 @@ import spotify from "../assets/spotify.png";
 import mongodb from "../assets/mongodb.png";
 import nodejs from "../assets/nodejs.png";
 import postgresql from "../assets/postgresql.png";
+import spring from "../assets/spring.png";
 
 export default {
+  spring,
   postgresql,
   nodejs,
   mongodb,
