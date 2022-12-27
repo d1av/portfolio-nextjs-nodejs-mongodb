@@ -61,9 +61,9 @@ const Header = () => (
       className="app__header-circles"
     >
       {[
-        "https://raw.githubusercontent.com/d1av/d1av/main/images/java.png",
         "https://raw.githubusercontent.com/d1av/d1av/main/images/angular.png",
         images.spring,
+        "https://raw.githubusercontent.com/d1av/d1av/main/images/java.png",
         images.nodejs,
         images.typescript,
       ].map((circle:any, index:number) => (
